@@ -1,8 +1,6 @@
-// lib/splash_screen.dart
-
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // This is the next screen
+import 'package:popnmark/features/auth/presentation/screens/auth_gate.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        MaterialPageRoute(builder: (context) => const AuthGate()),
       );
     });
   }
